@@ -24,7 +24,7 @@
   ## 1. Angular:
   
   * ¿Qué es Angular y cuál es su propósito principal en el desarrollo web?
-  * R = Angular es un framework para desarrollo de paginas web donde podemos crear paginas dinamicas, eficientes y altamante personalizables.
+  R = Angular es un framework para desarrollo de paginas web donde podemos crear paginas dinamicas, eficientes y altamante personalizables.
   
   * Explica la diferencia entre AngularJS y Angular.
   * R = AngularJs es una primera versión de Angular donde se usa solamente JavaScript con una estructura MVC y Angular son todas las versiones posteriores "2+" donde se implementa typescript y se basa en una estructura de componentes y 
