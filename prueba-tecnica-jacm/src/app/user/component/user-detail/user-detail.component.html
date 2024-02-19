@@ -1,0 +1,183 @@
+<div class="ud-padding">
+  <button mat-mini-fab [color]="'primary'" (click)="goBack()">
+    <mat-icon>arrow_left</mat-icon>
+  </button>
+  <span class="ud-title">Detalle de usuario</span>
+</div>
+<div *ngIf="selectedUser$ | async as selectedUser">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Informacion basica</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="ud-padding-info">
+      <mat-grid-list cols="15" rowHeight="100px">
+        <mat-grid-tile [colspan]="3" [style.background]="backgroundColor">
+          <mat-grid-tile-header class="ud-centered-content">
+            <span class="ud-text-size">Nombre:</span>
+          </mat-grid-tile-header>
+          <mat-grid-tile-footer
+            class="ud-centered-content"
+            [style.background]="backgroundColor"
+          >
+            <span class="ud-text-size">{{ selectedUser.name }}</span>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [style.background]="backgroundColor">
+          <mat-grid-tile-header class="ud-centered-content">
+            <span class="ud-text-size">Usuario:</span>
+          </mat-grid-tile-header>
+          <mat-grid-tile-footer
+            class="ud-centered-content"
+            [style.background]="backgroundColor"
+          >
+            <span class="ud-text-size">{{ selectedUser.username }}</span>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [style.background]="backgroundColor">
+          <mat-grid-tile-header class="ud-centered-content">
+            <span class="ud-text-size">Correo:</span>
+          </mat-grid-tile-header>
+          <mat-grid-tile-footer
+            class="ud-centered-content"
+            [style.background]="backgroundColor"
+          >
+            <span class="ud-text-size">{{ selectedUser.email }}</span>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [style.background]="backgroundColor">
+          <mat-grid-tile-header class="ud-centered-content">
+            <span class="ud-text-size">numero:</span>
+          </mat-grid-tile-header>
+          <mat-grid-tile-footer
+            class="ud-centered-content"
+            [style.background]="backgroundColor"
+          >
+            <span class="ud-text-size">{{ selectedUser.phone }}</span>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [style.background]="backgroundColor">
+          <mat-grid-tile-header class="ud-centered-content">
+            <span class="ud-text-size">Sitio web:</span>
+          </mat-grid-tile-header>
+          <mat-grid-tile-footer
+            class="ud-centered-content"
+            [style.background]="backgroundColor"
+          >
+            <span class="ud-text-size">{{ selectedUser.website }}</span>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Domicilio</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="ud-padding-info">
+      <mat-grid-list cols="15" rowHeight="100px">
+        <mat-grid-tile [colspan]="3" [style.background]="backgroundColor">
+          <mat-grid-tile-header class="ud-centered-content">
+            <span class="ud-text-size">Calle:</span>
+          </mat-grid-tile-header>
+          <mat-grid-tile-footer
+            class="ud-centered-content"
+            [style.background]="backgroundColor"
+          >
+            <span class="ud-text-size">{{ selectedUser.name }}</span>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [style.background]="backgroundColor">
+          <mat-grid-tile-header class="ud-centered-content">
+            <span class="ud-text-size">Edificio:</span>
+          </mat-grid-tile-header>
+          <mat-grid-tile-footer
+            class="ud-centered-content"
+            [style.background]="backgroundColor"
+          >
+            <span class="ud-text-size">{{ selectedUser.username }}</span>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [style.background]="backgroundColor">
+          <mat-grid-tile-header class="ud-centered-content">
+            <span class="ud-text-size">Ciudad:</span>
+          </mat-grid-tile-header>
+          <mat-grid-tile-footer
+            class="ud-centered-content"
+            [style.background]="backgroundColor"
+          >
+            <span class="ud-text-size">{{ selectedUser.email }}</span>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [style.background]="backgroundColor">
+          <mat-grid-tile-header class="ud-centered-content">
+            <span class="ud-text-size">Código postal:</span>
+          </mat-grid-tile-header>
+          <mat-grid-tile-footer
+            class="ud-centered-content"
+            [style.background]="backgroundColor"
+          >
+            <span class="ud-text-size">{{ selectedUser.phone }}</span>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [style.background]="backgroundColor">
+          <mat-grid-tile-header class="ud-centered-content">
+            <span class="ud-text-size">Geolocalización:</span>
+          </mat-grid-tile-header>
+          <mat-grid-tile-footer
+            class="ud-centered-content"
+            [style.background]="backgroundColor"
+          >
+            <span class="ud-text-size"
+              >Latitud: {{ selectedUser.address.geo.lat }} Longitud:
+              {{ selectedUser.address.geo.lng }}</span
+            >
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Compañia</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="ud-padding-info">
+      <mat-grid-list cols="9" rowHeight="100px">
+        <mat-grid-tile [colspan]="3" [style.background]="backgroundColor">
+          <mat-grid-tile-header class="ud-centered-content">
+            <span class="ud-text-size">Nombre:</span>
+          </mat-grid-tile-header>
+          <mat-grid-tile-footer
+            class="ud-centered-content"
+            [style.background]="backgroundColor"
+          >
+            <span class="ud-text-size">{{ selectedUser.company.name }}</span>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [style.background]="backgroundColor">
+          <mat-grid-tile-header class="ud-centered-content">
+            <span class="ud-text-size">Eslogan:</span>
+          </mat-grid-tile-header>
+          <mat-grid-tile-footer
+            class="ud-centered-content"
+            [style.background]="backgroundColor"
+          >
+            <span class="ud-text-size">{{
+              selectedUser.company.catchPhrase
+            }}</span>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [style.background]="backgroundColor">
+          <mat-grid-tile-header class="ud-centered-content">
+            <span class="ud-text-size">Giro:</span>
+          </mat-grid-tile-header>
+          <mat-grid-tile-footer
+            class="ud-centered-content"
+            [style.background]="backgroundColor"
+          >
+            <span class="ud-text-size">{{ selectedUser.company.bs }}</span>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+</div>

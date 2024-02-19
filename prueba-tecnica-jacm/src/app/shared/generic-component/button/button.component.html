@@ -1,0 +1,12 @@
+<ng-container [ngSwitch]="ptjType">
+  <button *ngSwitchCase="buttonTypeEnum.basic" mat-button [color]="ptjColor">
+    {{ ptjText }}
+  </button>
+  <button
+    *ngSwitchCase="buttonTypeEnum.raised"
+    mat-raised-button
+    [color]="ptjColor"
+  >
+    {{ ptjText }}
+  </button>
+</ng-container>
