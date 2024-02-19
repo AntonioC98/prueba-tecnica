@@ -2,8 +2,8 @@
 
   # prueba-tecnica-jacm
   # Instalación y ejecución
-  1.- Descargar o clonar la carpeta prueba-tecnica-jacm
-  2.- Instalar Node JS de la siguiente ruta "https://nodejs.org/en/download", puede o no requerir agregar variables de entorno en su computadora, para configurar siga los pasos de la siguiente imagen
+  * 1.- Descargar o clonar la carpeta prueba-tecnica-jacm
+  * 2.- Instalar Node JS de la siguiente ruta "https://nodejs.org/en/download", puede o no requerir agregar variables de entorno en su computadora, para configurar siga los pasos de la siguiente imagen
     ![image](https://github.com/AntonioC98/prueba-tecnica/assets/160462690/641977ec-8914-49e0-a598-1b0458e1c548)
   3.- Descargar VS Code de la siguiente liga "https://code.visualstudio.com/", abrir la carpeta prueba-tecnica-jacm, abrir una terminal dentro de VS Code y ejecutar el siguiente comando "npm i"
   4.- Ejecutar el comando "npm run ng serve" para levantar el proyecto y poder visualizarlo generalmente en la siguiente ruta "localhost:4200"
